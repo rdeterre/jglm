@@ -463,4 +463,20 @@ public final class Mat3 extends AbstractMat {
 			.append("\n}")
 			.toString();
 	}
+	
+	public boolean isDefined() {
+		if (   !Float.isNaN(m00)
+			&& !Float.isNaN(m10)
+			&& !Float.isNaN(m20)
+			&& !Float.isNaN(m01)
+			&& !Float.isNaN(m11)
+			&& !Float.isNaN(m21)
+			&& !Float.isNaN(m02)
+			&& !Float.isNaN(m12)
+			&& !Float.isNaN(m22)) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 }

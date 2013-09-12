@@ -196,4 +196,15 @@ public final class Vec4 extends AbstractVec {
 			.append("}")
 			.toString();
 	}
+	
+	public boolean isDefined() {
+		if (   !Float.isNaN(x)
+			&& !Float.isNaN(y)
+			&& !Float.isNaN(z)
+			&& !Float.isNaN(w)) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 }

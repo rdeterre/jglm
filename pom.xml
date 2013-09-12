@@ -6,7 +6,7 @@
 
 	<groupId>com.hackoeur</groupId>
 	<artifactId>jglm</artifactId>
-	<version>0.1-SNAPSHOT</version>
+	<version>0.1.1-SNAPSHOT</version>
 	<name>jglm</name>
 	<description>A conceptual port of OpenGL Mathematics (GLM) Library to Java</description>
 	<packaging>jar</packaging>

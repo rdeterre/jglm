@@ -33,4 +33,6 @@ public interface Vec {
 	boolean equalsWithEpsilon(Vec obj);
 	
 	boolean equalsWithEpsilon(Vec obj, float epsilon);
+	
+	boolean isDefined();
 }

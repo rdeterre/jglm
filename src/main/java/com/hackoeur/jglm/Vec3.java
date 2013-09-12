@@ -218,4 +218,14 @@ public final class Vec3 extends AbstractVec {
 			.append("}")
 			.toString();
 	}
+	
+	public boolean isDefined() {
+		if (   !Float.isNaN(x)
+			&& !Float.isNaN(y)
+			&& !Float.isNaN(z)) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 }

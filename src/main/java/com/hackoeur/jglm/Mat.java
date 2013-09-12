@@ -59,4 +59,6 @@ public interface Mat {
 	boolean equalsWithEpsilon(Mat obj);
 	
 	boolean equalsWithEpsilon(Mat obj, float epsilon);
+	
+	boolean isDefined();
 }
