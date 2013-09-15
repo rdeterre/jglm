@@ -553,4 +553,20 @@ public final class Mat4 extends AbstractMat {
 			return false;
 		}
 	}
+	
+	public Mat4 multiply(Mat4 other) {
+		float[][] cols = new float[4][4];
+		for (int c = 0; c < 4; c++) {
+			for (int r = 0; r < 4; r++) {
+				Vec4 thisRow = (Vec4) this.transpose().getColumn(r);
+				Vec4 otherCol= (Vec4) other.getColumn(c);
+				cols[c][r] = thisRow.dot(otherCol);
+			}
+		}
+		Mat4 newMat = new Mat4(new Vec4(cols[0]),
+							   new Vec4(cols[1]),
+							   new Vec4(cols[2]),
+							   new Vec4(cols[3]));
+		return newMat;
+	}
 }

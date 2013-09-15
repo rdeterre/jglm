@@ -45,6 +45,15 @@ public final class Vec3 extends AbstractVec {
 		this.z = vec.z;
 	}
 	
+	public Vec3(float[] values) {
+		if (values.length != 3) {
+			System.err.println("Bad vector creation");
+		}
+		this.x = values[0];
+		this.y = values[1];
+		this.z = values[2];
+	}
+	
 	@Override
 	public int getDimensions() {
 		return 3;
@@ -226,6 +235,20 @@ public final class Vec3 extends AbstractVec {
 			return true;
 		} else {
 			return false;
+		}
+	}
+	
+	public float get(int i) {
+		switch (i) {
+		case 0:
+			return x;
+		case 1:
+			return y;
+		case 2:
+			return z;
+		default:
+			System.err.println("Bad array access");
+			return 0f;
 		}
 	}
 }

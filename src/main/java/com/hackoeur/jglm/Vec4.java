@@ -55,6 +55,16 @@ public final class Vec4 extends AbstractVec {
 		this.w = w;
 	}
 	
+	public Vec4(float[] values) {
+		if (values.length != 4) {
+			System.err.println("Bad vector creation");
+		}
+		this.x = values[0];
+		this.y = values[1];
+		this.z = values[2];
+		this.w = values[3];
+	}
+	
 	@Override
 	public int getDimensions() {
 		return 4;
@@ -205,6 +215,21 @@ public final class Vec4 extends AbstractVec {
 			return true;
 		} else {
 			return false;
+		}
+	}
+	public float get(int i) {
+		switch (i) {
+		case 0:
+			return x;
+		case 1:
+			return y;
+		case 2:
+			return z;
+		case 3:
+			return w;
+		default:
+			System.err.println("Bad array access");
+			return 0f;
 		}
 	}
 }
